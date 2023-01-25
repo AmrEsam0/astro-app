@@ -1,0 +1,25 @@
+---
+import "../styles/global.css";
+const pages = [
+	{
+		title: "Home",
+		url: "/",
+	},
+	{
+		title: "About",
+		url: "/about",
+	},
+];
+---
+
+<nav>
+	<ul>
+		{
+			pages.map((page) => (
+				<li>
+					<a href={page.url}>{page.title}</a>
+				</li>
+			))
+		}
+	</ul>
+</nav>
