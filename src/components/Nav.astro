@@ -13,20 +13,20 @@ const pages = [
 ---
 
 <nav
-	class="left-0 flex justify-between p-6 items-center w-screen mb-6 backdrop-blur-xl top-0 absolute"
+	class="left-0 flex justify-between p-6 w-screen mb-6 shadow-lg border-b-2 border-gray-800 rounded-b-md backdrop-blur-2xl top-0 absolute"
 >
 	<p>WELCOME</p>
 	<ul>
 		{
 			pages.map((page) => (
-				<li class="inline ml-3">
+				<div class="inline ml-3 ">
 					<a
-						class="bg-gray-800 px-8 py-2 text-white text-center rounded"
+						class="hover:transition-colors ease-in-out duration-500 border-[#302b63] border-2 hover:bg-[#302b63]  bg-[#24243e] px-8 py-2 text-white text-center rounded"
 						href={page.url}
 					>
 						{page.title}
 					</a>
-				</li>
+				</div>
 			))
 		}
 	</ul>
