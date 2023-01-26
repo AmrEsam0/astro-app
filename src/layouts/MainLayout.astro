@@ -13,8 +13,22 @@ const { title } = Astro.props;
 <!DOCTYPE html>
 <html lang="en">
 	<MainHeader title={title} />
-	<body>
+	<body class="p-3 bg-gray-900 text-gray-300">
 		<Nav />
 		<slot />
+		<style>
+			html {
+				height: 100%;
+			}
+			body {
+				height: 100%;
+				background-image: linear-gradient(
+						rgba(128, 128, 130, 0.7),
+						transparent 0.04em
+					),
+					linear-gradient(90deg, rgba(128, 128, 130, 0.7), transparent 0.04em);
+				background-size: 2em 2em;
+			}
+		</style>
 	</body>
 </html>
