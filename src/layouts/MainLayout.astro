@@ -13,7 +13,7 @@ const { title } = Astro.props;
 <!DOCTYPE html>
 <html lang="en" class="w-full h-full">
 	<MainHeader title={title} />
-	<body class="p-3 text-gray-300 h-full">
+	<body class="px-3 text-gray-300 w-full h-full flex flex-col">
 		<Nav />
 		<slot />
 		<style>
@@ -34,12 +34,8 @@ const { title } = Astro.props;
 				); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 			}
 			body {
-				background-image: linear-gradient(
-						rgba(128, 128, 130, 0.7),
-						transparent 0.04em
-					),
-					linear-gradient(90deg, rgba(128, 128, 130, 0.7), transparent 0.04em);
-				background-size: 2em 2em;
+				background-image: radial-gradient(#302b63 1px, transparent 1px);
+				background-size: calc(10 * 1px) calc(10 * 1px);
 			}
 		</style>
 	</body>
